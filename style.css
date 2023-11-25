@@ -1,20 +1,92 @@
+/* Reset some default browser styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 header {
+    background-color: #007bff;
+    color: #fff;
     text-align: center;
+    padding: 20px;
 }
 
 h1 {
-    margin: 0;
+    margin-bottom: 5px;
 }
 
 h2 {
-    border-bottom: 2px solid #333;
+    color: #007bff;
+}
+
+section {
+    margin: 20px 0;
 }
 
 p {
-    margin: 5px 0;
+    margin-bottom: 10px;
+}
+
+.projects p {
+    margin-bottom: 15px;
+}
+
+.skills, .organizations {
+    font-weight: bold;
+}
+
+/* Add some spacing to the list items */
+ul, ol {
+    margin-bottom: 10px;
+}
+
+/* Style links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style code blocks */
+code {
+    background-color: #f8f9fa;
+    padding: 2px 4px;
+    border: 1px solid #ccc;
+}
+
+/* Add some padding to images */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Container for the whole content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
 }
