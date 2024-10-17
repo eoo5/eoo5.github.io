@@ -1,80 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Erasto Omolo - Resume</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
 </head>
-
 <body>
-    <header>
-        <h1>Erasto Omolo </h1>
-        <p>BS in Computer Science, University of Pittsburgh</p>
-    </header>
-
-    <section class="education">
-        <h2>Education</h2>
-        <p>08/2020 – 05/2024</p>
-        <p>Pittsburgh, PA</p>
-        <p>BS in Computer Science, University of Pittsburgh</p>
-        <p><strong>Relevant Coursework:</strong><br>
-            Discrete Math for CS, Data Structures I & II, Computer Organization, Programming for Web Applications, Calculus I & II, AI/ML, Stats for Business Management, Intro to Operating Systems, Interface Design Methodology, Cybercrime
-        </p>
-        <p><strong>Certifications:</strong><br>
-            AWS Cloud Practitioner CLF-C01
-        </p>
+    <nav id="desktop-nav">
+        <div class="logo">Erasto Omolo</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Erasto Omolo</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile-pic.png" alt = "Erasto Omolo profile picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1"> Hello I'm</p>
+            <h1 class="title">Erasto Omolo</h1>
+            <p class="section__text__p2">Software Developer</p>
+            <div class="btn-container">
+                <button 
+                    class="btn btn-color-2" 
+                    onclick="window.open('./assets/Erasto-Omolo-Resume-1.pdf')"
+                >
+                Download CV
+                </button>
+                <button 
+                    class="btn btn-color-1" 
+                    onclick="location.href= './#contact'"
+                >
+                Contact Info
+                </button>
+            </div>
+            <div id="socials-container">
+                <img 
+                    src="./assets/linkedin.png" 
+                    alt="My LinkedIn Profile"
+                    class="icon" 
+                    onclick="location.href='https://www.linkedin.com/in/erasto-omolo/'"
+                />
+                <img 
+                    src="./assets/github.png" 
+                    alt="My GitHub Profile"
+                    class="icon" 
+                    onclick="location.href='https://github.com/eoo5'"
+                />
+            </div>
+        </div>
     </section>
-
-    <section class="projects">
-        <h2>Projects</h2>
-        <p><strong>colLextion:</strong> Created a book recommendation detection web app for the Lex Fridman Podcast using spaCy, Python, and Node.js. Worked in a team of 3 for my Practical AI class. Used off-the-shelf NLP model to detect when books were mentioned in the transcript.</p>
-        <p><strong>Roomatch Web:</strong> Collaborated with a team of four to develop a roommate-matching web application deployed on Google App Engine. Utilized HTML, Python, JavaScript, Flask, and GAE</p>
-        <p><strong>Roomatch Mobile:</strong> Created a mobile Tinder-like roommate-matching application using Flutter. Worked in a team of 4. Focused on the software architecture aspect, creating wireframes and personas. </p>
-    </section>
-
-    <section class="experience">
-        <h2>Professional Experience</h2>
-        <p><strong>IT Data Services Intern, Federal Home Loan Bank Pittsburgh</strong><br>
-            05/2023 – 08/2023<br>
-            • Successfully designed and implemented a service connector using Informatica Cloud, enabling seamless data extraction.<br>
-            • Obtained AWS Cloud Practitioner CLF-C01 Certification.<br>
-            • Collaborated with a team to ensure data integrity and efficiency by backing up existing Tableau workbooks.<br>
-            • Prepared databases for cloud migration by testing latency on over 200 pre-existing Tableau workbooks.
-        </p>
-         <p><strong>IT Data Services Intern, Federal Home Loan Bank Pittsburgh</strong><br>
-            04/2020 – present<br>
-            • Successfully designed and implemented a service connector using Informatica Cloud, enabling seamless data extraction.<br>
-            • Obtained AWS Cloud Practitioner CLF-C01 Certification.<br>
-            • Collaborated with a team to ensure data integrity and efficiency by backing up existing Tableau workbooks.<br>
-            • Prepared databases for cloud migration by testing latency on over 200 pre-existing Tableau workbooks.
-        </p>
-        <p><strong>Delivery Driver, DoorDash/Instacart</strong><br>
-            04/2020 – present<br>
-            • Successfully completed over 1000 deliveries, demonstrating exceptional efficiency and timely service.<br>
-            • Maintained an outstanding Customer Satisfaction rate above 4.9, receiving positive feedback for service excellence and attention to customer needs.<br>
-            • Exercised strong customer service skills daily, ensuring a positive experience for customers.
-        </p>
-        <p><strong>Sneaker Reseller</strong><br>
-            04/2020 – present<br>
-            • Demonstrated proficiency in identifying high-demand items<br>
-            • Conducting market research to stay up-to-date on current trends to determine effective pricing strategies<br>
-            • Exercised strong customer service skills daily, ensuring a positive experience for customers.
-        </p>
-        
-    </section>
-
-    <section class="skills">
-        <h2>Skills</h2>
-        <p>Java, C, Python, Flask, HTML, CSS, JavaScript, GCP, SQL, Flutter/Dart, VertexAI, BigQueryML, Git</p>
-    </section>
-
-    <section class="organizations">
-        <h2>Organizations</h2>
-        <p>Pitt CS Club, Black Mens Collective, Pitt Intramural Soccer</p>
-    </section>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
